@@ -1,4 +1,4 @@
-import fcTemporal from './js/lib/fctemporal.js';
+import fcTemporal from 'temporal-polyfill';
 // import luxon from "./js/lib/luxon.js";
 // import ZitRos from "./js/lib/zit-ros.js";
 

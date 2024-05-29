@@ -12,6 +12,7 @@
     "dev-ip": "^1.0.1",
     "qrcode-terminal": "^0.12.0",
     "rimraf": "^3.0.2",
-    "sass": "^1.67.0"
+    "sass": "^1.67.0",
+    "temporal-polyfill": "^0.2.4"
   }
 }
