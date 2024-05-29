@@ -2,9 +2,10 @@
   "name": "date-diff",
   "version": "1.0.0",
   "scripts": {
-    "watch": "rimraf dist && npx @11ty/eleventy --watch --incremental",
-    "serve": "rimraf dist && npx @11ty/eleventy --serve --incremental",
-    "build": "rimraf dist && npx @11ty/eleventy"
+    "preflight": "rimraf ./js/lib/temporal-polyfill && cp -rf ./node_modules/temporal-polyfill ./js/lib/temporal-polyfill",
+    "watch": "npm run preflight && rimraf dist && npx @11ty/eleventy --watch --incremental",
+    "serve": "npm run preflight && rimraf dist && npx @11ty/eleventy --serve --incremental",
+    "build": "npm run preflight && rimraf dist && npx @11ty/eleventy"
   },
   "author": "नितिन कुमार",
   "devDependencies": {

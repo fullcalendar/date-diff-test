@@ -1,7 +1,4 @@
-import fcTemporal from 'temporal-polyfill';
-// import luxon from "./js/lib/luxon.js";
-// import ZitRos from "./js/lib/zit-ros.js";
-
+import { Temporal as fcTemporal } from './js/lib/temporal-polyfill/index.js';
 
 function Temporal_fun(date1, date2) {
 	// date1 = convertDate(date1);
@@ -18,30 +15,12 @@ function Temporal_fun(date1, date2) {
 }
 
 function fcTemporal_fun(date1, date2) {
-
 	return fcTemporal.Calendar.from('iso8601').dateUntil(
 		fcTemporal.PlainDate.from(date1),
 		fcTemporal.PlainDate.from(date2),
 		{ largestUnit: 'year' }
 	);
 }
-
-// function luxon_fun(date1, date2) {
-// 	let end = luxon.DateTime.fromISO(date1);
-// 	let start = luxon.DateTime.fromISO(date2);
-// 	let diff = start.diff(end, ['years', 'months', 'days']);
-// 	return diff.toObject();
-// }
-
-// function ZitRos_fun(date1, date2) {
-// 	date1 = convertDateToUTC(date1);
-// 	date2 = convertDateToUTC(date2);
-// 	let diff = ZitRos(
-// 		new Date(Date.UTC(date1.y, date1.m, date1.d, 0, 0, 0, 0)),
-// 		new Date(Date.UTC(date2.y, date2.m, date2.d, 0, 0, 0, 0))
-// 	);
-// 	return diff;
-// }
 
 function calcAge() {
 	if (form.checkValidity()) {
